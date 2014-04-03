@@ -7,13 +7,13 @@ published: true
 project:
 ---
 
-[Metaprogramming](http://rubymonk.com/learning/books/2-metaprogramming-ruby/chapters/32-introduction-to-metaprogramming/lessons/75-being-meta) is a powerful, yet often misunderstood and misused tool in dynamic programming languages like [Ruby](https://www.ruby-lang.org/en/). In essence, metaprogramming allows you to write code which generates code at runtime. Conceptually this can be very confusing for beginners, but is very powerful for keeping code [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). 
+[Metaprogramming](http://rubymonk.com/learning/books/2-metaprogramming-ruby/chapters/32-introduction-to-metaprogramming/lessons/75-being-meta) is a powerful, yet misunderstood and often misused tool in dynamic programming languages like [Ruby](https://www.ruby-lang.org/en/). With it, you can write code to generate code at runtime. Conceptually this can be very confusing for beginners, but is very powerful for keeping code [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). 
 
-In a project dealing with real estate listings, I have an API that serializes objects to JSON. Using Rails `ActiveModel::Serializer` I format several currency properties as US denominations. 
+In a project dealing with real estate listings, I have an API that serializes objects to JSON. Using Rails' `ActiveModel::Serializer`, I format several currency properties for US denominations. 
 
-For example, the decimal `1534.00` would be formatted AS `$1,534.00`.
+e.g. the decimal `1534.00` would be formatted AS `$1,534.00`.
 
-The following six methods format the properties, but this code is not as DRY as it could be. The method call to `number_to_currency` is repeated. If we wanted to add a `precision` parameter to all deposit properties, we would have to update six methods. 
+The following six methods format the respective properties, but clearly this code is not DRY. The method call to 'number_to_currency' is repeated. If we wanted to add a `precision` parameter to all deposit properties, we would have to update six methods. 
 
 ```ruby
 def security_deposit
