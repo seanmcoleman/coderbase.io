@@ -12,7 +12,7 @@ In a project dealing with real estate listings, I have an API that serializes ob
 
 For example, the decimal `1534.00` would be formatted AS `$1,534.00`.
 
-The following six methods format the properties, but this code is not as DRY as it could be. The method call to `number_to_currency` is repeated. If we wanted to add a `precision` parameter to all deposit properties, we would have to update six methods. 
+The following six methods format the properties, but this code is not as DRY as it could be. 
 
 ```ruby
 def security_deposit
@@ -36,7 +36,7 @@ def credit_check_deposit
 end
 ```
 
-Using metaprogramming, we can DRY our code with the following:
+The method call to `number_to_currency` is repeated. If we wanted to add a `precision` parameter to all deposit properties, we would have to update six methods. Using metaprogramming, we can DRY our code with the following:
 
 ```ruby
 deposit_fields = %w(security_deposit pet_deposit earnest_deposit cleaning_deposit credit_check_deposit)
