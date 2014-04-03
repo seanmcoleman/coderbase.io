@@ -1,6 +1,6 @@
 ---
 focuses: [Ruby, Rails, SASS, Javascript, UX]
----
+--
 
 > The trajectory is always more interesting than the current location.
 
