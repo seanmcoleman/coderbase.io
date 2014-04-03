@@ -3,8 +3,7 @@ title: Metaprogramming to DRY out code
 permalink: metaprogramming-to-dry-out-code
 languages: [ruby, rails]
 summary: How to use the dark art of metaprogramming to keep code DRY
-published: true 
-project:
+published: true
 ---
 
 [Metaprogramming](http://rubymonk.com/learning/books/2-metaprogramming-ruby/chapters/32-introduction-to-metaprogramming/lessons/75-being-meta) is a powerful, yet often misunderstood and misused tool in dynamic programming languages like [Ruby](https://www.ruby-lang.org/en/). In essence, metaprogramming allows you to write code which generates code at runtime. Conceptually this can be very confusing for beginners, but is very powerful for keeping code [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). 
