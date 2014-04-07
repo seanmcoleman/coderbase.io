@@ -1,7 +1,7 @@
 ---
-title: Holidayjs
+title: HolidayJS
 permalink: holidayjs
-description: We won a Nokia Windows 7 phone at holidayjs
+description: We won a Nokia Windows 7 phone at HolidayJS
 homepage: http://holidayjs.com
 languages: [javascript]
 visible: true
